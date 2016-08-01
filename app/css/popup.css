@@ -1,0 +1,81 @@
+.popup_moduleBg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: #000;
+    opacity: .2;
+}
+
+#boundingBox {
+    position: absolute;
+    top: 100px;
+    left: 60px;
+}
+
+#boundingBox div.content > span,
+input {
+    display: block;
+    margin-top: 5px;
+    width: 100%;
+}
+
+#boundingBox div.content > button {
+    margin: 5px;
+    border-color: black;
+    background-color: #DEDEDE;
+}
+
+.tag {
+    min-height: 100px;
+    border: 1px solid black;
+    position: absolute;
+    background-color: #E0EDD4;
+    border-radius: 10px;
+}
+
+.arrow * {
+    display: block;
+    border-width: 20px;
+    position: absolute;
+    font-size: 0;
+    line-height: 0;
+}
+
+.upArrow div.arrow {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: -40px;
+    left: 100px;
+}
+
+.upArrow div.arrow em {
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent black;
+}
+
+.upArrow div.arrow span {
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent #E0EDD4;
+    top: 1px;
+}
+
+.downArrow div.arrow {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 98px;
+    left: 100px;
+}
+
+.downArrow div.arrow em {
+    border-style: solid dashed dashed dashed;
+    border-color: black transparent transparent;
+}
+
+.downArrow div.arrow span {
+    border-style: solid dashed dashed dashed;
+    border-color: #E0EDD4 transparent transparent;
+    top: -1px;
+}

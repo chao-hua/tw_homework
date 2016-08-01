@@ -1,0 +1,23 @@
+{
+    "name": "cruise",
+    "description": "home work for TW",
+    "main": "index.js",
+    "authors": [
+        "chaohua@outlook.com"
+    ],
+    "license": "ISC",
+    "keywords": [
+        "jquery",
+        "bootstrap",
+        "angular",
+        "angular-resource"
+    ],
+    "homepage": "",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ]
+}

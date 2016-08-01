@@ -1,0 +1,85 @@
+<!-- tabs -->
+<div class="container">
+    <!-- nav-tabs    -->
+    <ul class="nav nav-tabs" role="tablist" id="menu-tab">
+        <li class="pull-right"><a href="#tab-help" role="tab" data-toggle="tab">HELP</a></li>
+        <li class="active pull-right"><a href="#tab-agents" role="tab" data-toggle="tab">AGENTS</a></li>
+        <li class="pull-right"><a href="#tab-myCruise" role="tab" data-toggle="tab">MY CRUISE</a></li>
+        <li class="pull-right"><a href="#tab-dashboard" role="tab" data-toggle="tab">DASHBOARD</a></li>
+    </ul>
+    <!-- tab-content -->
+    <div class="tab-content">
+        <div class="tab-pane" id="tab-dashboard">
+        </div>
+        <div class="tab-pane" id="tab-myCruise">
+        </div>
+        <div class="tab-pane" id="tab-help">
+        </div>
+        <!-- tab-agents -->
+        <div class="tab-pane active" id="tab-agents">
+            <div class="row" id="tab-agentsHeader">
+                <strong>Agents</strong>
+                <button type="button" class="btn btn-default btn-ellipse">All</button>
+                <button type="button" class="btn btn-default btn-ellipse active">Physical</button>
+                <button type="button" class="btn btn-default btn-ellipse">Virtual</button>
+            </div>
+            <div class="row" id="tab-agentsBody" ng-controller="AgentsListCtrl">
+                <div class="col-md-9" id="tab-agentBodyLeft">
+                    <div class="item" ng-repeat="agent in agents" ng-class="{'idle':'itemBGCIdle','building':'itemBGCBuilding'}[agent.type]">
+                        <div class="itemIcon"></div>
+                        <div class="itemInfo">
+                            <strong>{{agent.name}}</strong>
+                            <span class="division">|</span>
+                            <strong>{{agent.type}}</strong>
+                            <span class="division">|</span>
+                            <strong>{{agent.ip}}</strong>
+                            <span class="division">|</span>
+                            <strong>{{agent.path}}</strong>
+                            <br>
+                            <a href="#" class="addResource" ng-click="addResources(agent.id)" id="addResources_{{agent.id}}">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                <span>Specify Resources</span>
+                            </a>
+                            <span class="division">|</span>
+                            <span>Resources:</span>
+                            <span class="removeResources" ng-repeat="resourse in agent.resources">
+                                    {{resourse}}
+                                    <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"
+                                    ng-click="removeResources(agent.id,resourse)"></span>
+                            </span>
+                        </div>
+                        <div class="itemDeny">
+                            <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span>
+                            <a href="#">Deny</a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="col-md-3" id="tab-agentBodyRight">
+                    <strong>Summary</strong>
+                    <hr>
+                    <ul>
+                        <li ng-repeat="(key,value) in agents.typeObject">
+                            {{key}}
+                            <span class="pull-right">{{value}}</span>
+                        </li>
+                    </ul>
+                    <strong>History</strong>
+                    <hr>
+                    <ul>
+                        <li>bjstdmngbgr02/Acceptance_test</li>
+                        <li>bjstdmngbgr02/Acceptance_test</li>
+                        <li>bjstdmngbgr02/Acceptance_test</li>
+                        <li>bjstdmngbgr02/Acceptance_test</li>
+                        <li>bjstdmngbgr02/Acceptance_test</li>
+                        <li>bjstdmngbgr02/Acceptance_test</li>
+                        <li>bjstdmngbgr02/Acceptance_test</li>
+                        <li>bjstdmngbgr02/Acceptance_test</li>
+                        <li>bjstdmngbgr02/Acceptance_test</li>
+                        <li>bjstdmngbgr02/Acceptance_test</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

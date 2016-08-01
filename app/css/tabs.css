@@ -1,0 +1,134 @@
+body {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    min-width: 550px;
+}
+
+#menu-tab li a {
+    border: solid 1px;
+    border-bottom: 0px;
+    color: black;
+}
+
+#menu-tab li.active a {
+    background-color: #606060;
+    color: white;
+}
+
+.tab-pane {
+    width: 100%;
+    min-height: 500px;
+    border: solid 1px #3D3D3D;
+}
+
+#tab-agentsHeader {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #606060;
+    margin-left: 0;
+}
+
+#tab-agentsHeader button {
+    width: 80px;
+    margin-left: 30px;
+    margin-top: -8px;
+    border-radius: 20px;
+    background-color: #999999;
+    border-color: #3D3D3D;
+}
+
+#tab-agentsHeader button.active {
+    background-color: #DDDDDD;
+}
+
+#tab-agentsHeader strong {
+    width: 80px;
+    font-size: 20px;
+    color: #FFF;
+    margin-left: 30px;
+}
+
+#tab-agentsBody {
+    position: relative;
+    margin: 0;
+}
+
+#tab-agentBodyLeft {
+    min-height: 448px;
+    border-right: solid 1px;
+    border-top: solid 1px;
+}
+
+#tab-agentBodyLeft div.item {
+    position: relative;
+    margin: 20px 10px;
+    border: solid 1px #3D3D3D;
+    border-radius: 10px;
+    min-height: 80px;
+}
+
+.itemBGCIdle {
+    background-color: #CCE8B5;
+}
+
+.itemBGCBuilding {
+    background-color: #FFFBB9;
+}
+
+#tab-agentBodyLeft div.itemIcon {
+    float: left;
+    margin: 10px 20px;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    background-color: #929292;
+}
+
+#tab-agentBodyLeft div.itemInfo {
+    max-width: float: left;
+    margin: 20px;
+    max-width: 700px;
+}
+
+#tab-agentBodyLeft span.division {
+    margin: 10px;
+    color: #929292;
+}
+
+#tab-agentBodyLeft a.addResource {
+    text-decoration: underline;
+    color: black;
+}
+
+#tab-agentBodyLeft span.removeResources {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#tab-agentBodyLeft div.itemDeny {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+}
+
+#tab-agentBodyLeft div.itemDeny a {
+    color: black;
+    text-decoration: underline;
+}
+
+#tab-agentBodyRight {
+    min-height: 448px;
+    border-top: solid 1px;
+}
+
+#tab-agentBodyRight strong {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#tab-agentBodyRight ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

@@ -1,0 +1,43 @@
+[{
+    "id": "agent002",
+    "name": "bjstdmngbgr02.thoughtworks.com",
+    "type": "idle",
+    "ip": "192.168.1.2",
+    "path": "/var/lib/cruise-agent",
+    "resources": [
+        "ubuntu",
+        "firefox3",
+        "core-due"
+    ]
+}, {
+    "id": "agent003",
+    "name": "bjstdmngbgr03.thoughtworks.com",
+    "type": "building",
+    "ip": "192.168.1.3",
+    "path": "/var/lib/cruise-agent",
+    "resources": [
+        "ubuntu",
+        "firefox3",
+        "mysql",
+        "core-due"
+    ]
+}, {
+    "id": "agent004",
+    "name": "bjstdmngbgr04.thoughtworks.com",
+    "type": "idle",
+    "ip": "192.168.1.4",
+    "path": "/var/lib/cruise-agent",
+    "resources": [
+        "ubuntu",
+        "firefox3",
+        "mysql",
+        "core-due"
+    ]
+}, {
+    "id": "agent005",
+    "name": "bjstdmngbgr05.thoughtworks.com",
+    "type": "building",
+    "ip": "192.168.1.5",
+    "path": "/var/lib/cruise-agent",
+    "resources": []
+}]
