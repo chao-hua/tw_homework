@@ -25,7 +25,7 @@ agentsCtrls.controller('AgentsListCtrl', ['$scope', '$timeout', 'Agents',
                 typeObject[type] = typeCount;
             }
             $scope.agents.typeObject = typeObject;
-        }, 1000);
+        }, 100);
 
         $scope.removeResources = function(agentId, resource) {
             for (var i = 0; i < $scope.agents.length; i++) {
