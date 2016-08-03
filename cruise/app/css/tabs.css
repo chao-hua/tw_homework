@@ -12,8 +12,8 @@ body {
 }
 
 .tabs-black li.active a {
-    background-color: #606060;
-    color: white;
+    background-color: #606060 !important;
+    color: white !important;
 }
 
 .tab-pane {
