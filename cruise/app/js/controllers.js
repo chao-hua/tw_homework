@@ -41,22 +41,21 @@ agentsCtrls.controller('AgentsListCtrl', ['$scope', '$timeout', 'Agents',
 
         $scope.addResources = function(agentId) {
             //based on the button position show the prompt
-            var addResourcesA = $("#addResources_" + agentId);
+            var addResourcesA = $("#add-resources-" + agentId);
             var yPos, xPos, skinClassName;
             xPos = addResourcesA.offset().left + addResourcesA.outerWidth() / 2 - 120;
             if (($(window).height() - addResourcesA.offset().top) < 200) {
                 yPos = addResourcesA.offset().top - 120;
-                skinClassName = 'downArrow';
+                skinClassName = 'down-arrow';
             } else {
                 yPos = addResourcesA.offset().top + addResourcesA.outerHeight() + 20;
-                skinClassName = 'upArrow';
+                skinClassName = 'up-arrow';
             }
             new Popup().prompt({
                 content: '(separete multiple resources name with commas)',
                 x: xPos,
                 y: yPos,
                 skinClassName: skinClassName,
-                // isModule: true,
                 handler4ConfirmBtn: function(inputValue) {
 
                     for (var i = 0; i < $scope.agents.length; i++) {

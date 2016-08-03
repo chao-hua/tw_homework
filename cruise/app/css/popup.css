@@ -1,37 +1,22 @@
-.popup_moduleBg {
+.bounding-box {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    background-color: #000;
-    opacity: .2;
+    min-height: 100px;
+    border: 1px solid black;
+    background-color: #E0EDD4;
+    border-radius: 10px;
 }
 
-#boundingBox {
-    position: absolute;
-    top: 100px;
-    left: 60px;
-}
-
-#boundingBox div.content > span,
+.bounding-box div.content > span,
 input {
     display: block;
     margin-top: 5px;
     width: 100%;
 }
 
-#boundingBox div.content > button {
+.bounding-box div.content > button {
     margin: 5px;
     border-color: black;
     background-color: #DEDEDE;
-}
-
-.tag {
-    min-height: 100px;
-    border: 1px solid black;
-    position: absolute;
-    background-color: #E0EDD4;
-    border-radius: 10px;
 }
 
 .arrow * {
@@ -42,7 +27,7 @@ input {
     line-height: 0;
 }
 
-.upArrow div.arrow {
+.up-arrow div.arrow {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -50,18 +35,18 @@ input {
     left: 100px;
 }
 
-.upArrow div.arrow em {
+.up-arrow div.arrow em {
     border-style: dashed dashed solid dashed;
     border-color: transparent transparent black;
 }
 
-.upArrow div.arrow span {
+.up-arrow div.arrow span {
     border-style: dashed dashed solid dashed;
     border-color: transparent transparent #E0EDD4;
     top: 1px;
 }
 
-.downArrow div.arrow {
+.down-arrow div.arrow {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -69,13 +54,22 @@ input {
     left: 100px;
 }
 
-.downArrow div.arrow em {
+.down-arrow div.arrow em {
     border-style: solid dashed dashed dashed;
     border-color: black transparent transparent;
 }
 
-.downArrow div.arrow span {
+.down-arrow div.arrow span {
     border-style: solid dashed dashed dashed;
     border-color: #E0EDD4 transparent transparent;
     top: -1px;
+}
+
+.popup-module-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: #000;
+    opacity: .2;
 }

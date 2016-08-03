@@ -20,7 +20,7 @@
     Popup.prototype = $.extend({}, new Widget(), {
         renderUI: function() {
             this.boundingBox = $(
-                '<div class="tag col-md-6" id="boundingBox">' +
+                '<div class="bounding-box col-md-6">' +
                 '<div class="arrow">' +
                 '<em></em><span></span>' +
                 '</div>' +
@@ -32,7 +32,7 @@
                 '</div>' +
                 '</div>');
             if (this.cfg.isModule) {
-                this.moduleBg = $('<div class="popup_moduleBg" id="popup_moduleBg"></div>');
+                this.moduleBg = $('<div class="popup-module-container" id="popup-module-container"></div>');
                 this.moduleBg.prependTo('body');
             }
             this.input = this.boundingBox.find('.popup_input');
@@ -70,8 +70,8 @@
             this.moduleBg && this.moduleBg.remove();
         },
         prompt: function(cfg) {
-            ($("#boundingBox").length > 0) && $("#boundingBox").remove();
-            ($("#popup_moduleBg").length > 0) && $("#popup_moduleBg").remove();
+            ($(".bounding-box").length > 0) && $(".bounding-box").remove();
+            ($(".popup-module-container").length > 0) && $(".popup-module-container").remove();
 
             $.extend(this.cfg, cfg);
             this.render(this.cfg.container);
