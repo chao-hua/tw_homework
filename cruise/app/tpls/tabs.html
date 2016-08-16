@@ -43,7 +43,7 @@
                             </a>
                             <span class="division">|</span>
                             <span>Resources:</span>
-                            <span class="remove-resources" ng-repeat="resourse in agent.resources">
+                            <span class="remove-resources" ng-repeat="resourse in agent.resources track by $index">
                                     {{resourse}}
                                     <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"
                                     ng-click="removeResources(agent.id,resourse)"></span>
