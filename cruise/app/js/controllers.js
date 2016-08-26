@@ -7,24 +7,24 @@ agentsCtrls.controller('AgentsListCtrl', ['$scope', '$timeout', 'Agents',
         $timeout(function() {
             $scope.agents.count = $scope.agents.length;
 
-            var typeObject = new Object();
+            var typeSummary = new Object();
             for (var i = 0; i < $scope.agents.length; i++) {
                 var type = $scope.agents[i].type;
-                if (!(type in typeObject)) {
-                    typeObject[type] = 0;
+                if (!(type in typeSummary)) {
+                    typeSummary[type] = 0;
                 }
             }
 
-            for (type in typeObject) {
+            for (type in typeSummary) {
                 var typeCount = 0;
                 for (var j = 0; j < $scope.agents.length; j++) {
                     if (type == $scope.agents[j].type) {
                         typeCount++;
                     }
                 }
-                typeObject[type] = typeCount;
+                typeSummary[type] = typeCount;
             }
-            $scope.agents.typeObject = typeObject;
+            $scope.agents.typeSummary = typeSummary;
         }, 100);
 
         $scope.removeResources = function(agentId, resource) {
