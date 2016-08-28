@@ -3,6 +3,11 @@ var agentsCtrls = angular.module('agentsCtrls', []);
 agentsCtrls.controller('AgentsListCtrl', ['$scope', '$timeout', 'Agents',
     function($scope, $timeout, Agents) {
         $scope.agents = Agents.query();
+        $scope.agents.history = ['bjstdmngbgr02/Acceptance_test',
+            'bjstdmngbgr03/Acceptance_test',
+            'bjstdmngbgr04/Acceptance_test',
+            'bjstdmngbgr05/Acceptance_test'
+        ];
 
         $timeout(function() {
             $scope.agents.count = $scope.agents.length;
@@ -25,7 +30,7 @@ agentsCtrls.controller('AgentsListCtrl', ['$scope', '$timeout', 'Agents',
                 typeSummary[type] = typeCount;
             }
             $scope.agents.typeSummary = typeSummary;
-        }, 100);
+        }, 500);
 
         $scope.removeResources = function(agentId, resource) {
             for (var i = 0; i < $scope.agents.length; i++) {
@@ -51,13 +56,12 @@ agentsCtrls.controller('AgentsListCtrl', ['$scope', '$timeout', 'Agents',
                 yPos = addResourcesA.offset().top + addResourcesA.outerHeight() + 20;
                 skinClassName = 'up-arrow';
             }
-            new Popup().prompt({
+            new $.Popup().prompt({
                 content: '(separete multiple resources name with commas)',
                 x: xPos,
                 y: yPos,
                 skinClassName: skinClassName,
                 handler4ConfirmBtn: function(inputValue) {
-
                     for (var i = 0; i < $scope.agents.length; i++) {
                         if (agentId == $scope.agents[i].id) {
                             var newResources = new Array();
@@ -71,7 +75,22 @@ agentsCtrls.controller('AgentsListCtrl', ['$scope', '$timeout', 'Agents',
                         }
                     }
                 }
+            }).on('confirm', function() {
+                $scope.saveHistory(agentId);
             });
+        };
+
+
+        $scope.saveHistory = function(agentId) {
+            var history = '';
+            for (var i = 0; i < $scope.agents.length; i++) {
+                if (agentId == $scope.agents[i].id) {
+                    history = $scope.agents[i].name.split('.')[0];
+                }
+            }
+            history += '/Acceptance_test';
+            $scope.agents.history.unshift(history);
+            $scope.$apply();
         };
     }
 ]);

@@ -17,7 +17,7 @@
         };
     }
 
-    Popup.prototype = $.extend({}, new Widget(), {
+    Popup.prototype = $.extend({}, new $.Widget(), {
         renderUI: function() {
             this.boundingBox = $(
                 '<div class="bounding-box col-md-6">' +
@@ -80,5 +80,5 @@
         }
     });
 
-    window.Popup = Popup;
+    $.Popup = Popup;
 })();

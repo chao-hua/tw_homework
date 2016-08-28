@@ -40,5 +40,5 @@
         }
     };
 
-    window.Widget = Widget;
+    $.Widget = Widget;
 })();

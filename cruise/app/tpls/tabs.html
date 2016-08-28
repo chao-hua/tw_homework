@@ -17,7 +17,7 @@
         </div>
         <!-- tab-agents -->
         <div class="tab-pane active" id="tab-agents">
-            <div class="row tab-header" >
+            <div class="row tab-header">
                 <strong>Agents</strong>
                 <button type="button" class="btn btn-default btn-ellipse">All</button>
                 <button type="button" class="btn btn-default btn-ellipse active">Physical</button>
@@ -25,8 +25,7 @@
             </div>
             <div class="row tab-body" ng-controller="AgentsListCtrl">
                 <div class="tab-body-left col-md-9">
-                    <div class="item" ng-repeat="agent in agents" 
-                    ng-class="{'idle':'item-idle','building':'item-building'}[agent.type]">
+                    <div class="item" ng-repeat="agent in agents" ng-class="{'idle':'item-idle','building':'item-building'}[agent.type]">
                         <div class="item-icon"></div>
                         <div class="item-info">
                             <strong>{{agent.name}}</strong>
@@ -68,16 +67,7 @@
                     <strong>History</strong>
                     <hr>
                     <ul>
-                        <li>bjstdmngbgr02/Acceptance_test</li>
-                        <li>bjstdmngbgr02/Acceptance_test</li>
-                        <li>bjstdmngbgr02/Acceptance_test</li>
-                        <li>bjstdmngbgr02/Acceptance_test</li>
-                        <li>bjstdmngbgr02/Acceptance_test</li>
-                        <li>bjstdmngbgr02/Acceptance_test</li>
-                        <li>bjstdmngbgr02/Acceptance_test</li>
-                        <li>bjstdmngbgr02/Acceptance_test</li>
-                        <li>bjstdmngbgr02/Acceptance_test</li>
-                        <li>bjstdmngbgr02/Acceptance_test</li>
+                        <li ng-repeat="his in agents.history track by $index">{{his}}</li>
                     </ul>
                 </div>
             </div>
